@@ -55,8 +55,6 @@ const maxee = arr => {
 //console.log(maxee(myArry));
 
 // reducer
-// 3 args
-// return new arr
 
 const myReducer = arr => {
   let sum = 0;
@@ -65,19 +63,6 @@ const myReducer = arr => {
   }
   return sum;
 };
-
-const fullVertionReducer = (arr,fun,i)=>
-{
-  if( !i )
-  {
-    i = 0;
-  }
-  for ( i; i < arr.length; i++) {
-    fun(arr[i],i)
-  }
-
-}
-console.log(fullVertionReducer(myArry,((a,b)=>a+b)))
 
 // reverse number
 //51 -> 15
@@ -116,32 +101,9 @@ const optReveres = arg => {
 };
 
 //console.log(optReveres(178))
+//Compare the Triplets
 
-//maxChar
-// abbbbc => b
-let v = ["s", "d", "b", "s"];
-const maxChar = char => {
-  let temp = { val: "" };
-  let count = 0;
-  for (let i = 0; i < char.length; i++) {
-    temp.val = char[i];
-  }
-  return temp.val;
-};
-// if(char[i] === char[i+1])
-// count++;
-//  temp.val = char[i];
-//  temp.count = count;
-
-// }elseif(char[i-1] === char[i])
-// {
-// count++;
-//  temp.val = char[i];
-//  temp.count = count;
-
-// }
-
-//console.log(maxChar(v))
+//https://www.hackerrank.com/challenges/compare-the-triplets/problem
 
 let h = [5, 6, 7];
 let o = [3, 6, 10];
@@ -185,10 +147,6 @@ const veryBigSum = ar => {
 };
 //console.log(veryBigSum(big))
 //Diagonal Difference
-// 3
-// 11 2 4
-// 4 5 6
-// 10 8 -12
 
 const diagonalDifference = ( arr, arr1, arr2) => {
   let bigArray = [];

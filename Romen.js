@@ -19,14 +19,3 @@ const romanNumberConverter = num => {
 };
 
 console.log(romanNumberConverter(40));
-
-// I	11	XI
-// 2	II	12	XII
-// 3	III	13	XIII
-// 4	IV	14	XIV
-// 5	V	15	XV
-// 6	VI	16	XVI
-// 7	VII	17	XVII
-// 8	VIII	18	XVIII
-// 9	IX	19	XIX
-// 10	X	20	XX
