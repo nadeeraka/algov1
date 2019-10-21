@@ -66,7 +66,18 @@ const myReducer = arr => {
   return sum;
 };
 
-//console.log(myReducer(myArry))
+const fullVertionReducer = (arr,fun,i)=>
+{
+  if( !i )
+  {
+    i = 0;
+  }
+  for ( i; i < arr.length; i++) {
+    fun(arr[i],i)
+  }
+
+}
+console.log(fullVertionReducer(myArry,((a,b)=>a+b)))
 
 // reverse number
 //51 -> 15
@@ -192,6 +203,7 @@ const diagonalDifference = ( arr, arr1, arr2) => {
   else{
     return false;
   }
+
   for (let i = 0; i < bigArray.length; i++) {
     left.push(bigArray[i][i]);
   }
@@ -206,4 +218,7 @@ const diagonalDifference = ( arr, arr1, arr2) => {
   return l - r;
 };
 
-console.log(diagonalDifference( [11, 2, 4], [4, 5, 6], [10, 8, -12]));
+//console.log(diagonalDifference( [11, 2, 4], [4, 5, 6], [10, 8, -12]));
+
+
+
