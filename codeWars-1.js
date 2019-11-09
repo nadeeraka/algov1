@@ -66,9 +66,7 @@ function century(year) {
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 function accum(params) {
-  if (!typeof params === String) {
-    return false;
-  }
+  
   let newArr = [];
   let isLeft = true;
   const round = (s, i) => {
@@ -77,7 +75,8 @@ function accum(params) {
         let c = s.toUpperCase();
         newArr.push(c);
       } else {
-        newArr.push(s);
+          let c = s.toLowerCase();
+        newArr.push(c);
       }
       if (x === 0 && isLeft) {
         let v = "-";
@@ -87,7 +86,6 @@ function accum(params) {
   };
   let arr = params.split("");
   for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i], i);
 
     if (i === arr.length - 1) {
       isLeft = false;
@@ -96,3 +94,9 @@ function accum(params) {
   }
   return newArr.join("");
 }
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, and u as vowels for this Kata.
+
+// The input string will only consist of lower case letters and/or spaces.
+
