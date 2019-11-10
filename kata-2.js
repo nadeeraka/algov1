@@ -27,11 +27,15 @@ class Person {
 // A palindrome is word which reads the same backwards as it does forwards.
 // For example, pip is a palindrome, as pip backwards is still pip. kip, however, is not, for kip backwards is pik, not kip.
 // Write a function, palindrome, which returns true if the passed string is a palindrome, regardless of capitalisation, and false otherwise.
-function palindrome (str) {
-    return str.toLowerCase().split('').reverse().join('') == str.toLowerCase() 
-
+function palindrome(str) {
+  return (
+    str
+      .toLowerCase()
+      .split("")
+      .reverse()
+      .join("") == str.toLowerCase()
+  );
 }
-
 
 // Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
 
@@ -44,3 +48,39 @@ function palindrome (str) {
 //                         // 1*2*6 = 12, and finally 1*2 = 2
 
 //  persistence(4) === 0 // because 4 is already a one-digit number
+function persistence(params) {
+  let val = true;
+  result = 0;
+  let r = params > 10 ? 1 : 0;
+  if (r === 0) {
+    return 0;
+  }
+  const res = () => {
+    let arr;
+    let e = [];
+    if (result === 0) {
+      arr = params + "".split("");
+    } else {
+      arr = result + "".split("");
+    }
+    for (let i = 0; i < arr.length; i++) {
+      let num = parseInt(arr[i]);
+      e.push(num);
+    }
+    const reducer = (acc, cur) => acc * cur;
+    return (result = e.reduce(reducer));
+  };
+
+  res();
+  while (val) {
+    if (result >= 10 && r > 0) {
+      res();
+    } else {
+      val = false;
+    }
+    r++;
+    console.log(result);
+  }
+
+  return r - 1;
+}
