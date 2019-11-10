@@ -66,7 +66,6 @@ function century(year) {
 // The parameter of accum is a string which includes only letters from a..z and A..Z.
 
 function accum(params) {
-  
   let newArr = [];
   let isLeft = true;
   const round = (s, i) => {
@@ -75,7 +74,7 @@ function accum(params) {
         let c = s.toUpperCase();
         newArr.push(c);
       } else {
-          let c = s.toLowerCase();
+        let c = s.toLowerCase();
         newArr.push(c);
       }
       if (x === 0 && isLeft) {
@@ -86,7 +85,6 @@ function accum(params) {
   };
   let arr = params.split("");
   for (let i = 0; i < arr.length; i++) {
-
     if (i === arr.length - 1) {
       isLeft = false;
     }
@@ -101,28 +99,30 @@ function accum(params) {
 function getCount(str) {
   var vowelsCount = 0;
   // enter your majic here
-str.split('').map((res)=>{
-  switch (res) {
-      case 'a':
-          vowelsCount++;
-          break;
-          case 'e':
-          vowelsCount++;
-          break;
-          case 'i':
-              vowelsCount++;
-              break;
-              case 'o':
-          vowelsCount++;
-          break;
-          case 'u':
-          vowelsCount++;
-          break;
-    
-      default:
-          break;
-  }
-})
-return vowelsCount;
-}
+  str.split("").map(res => {
+    switch (res) {
+      case "a":
+        vowelsCount++;
+        break;
+      case "e":
+        vowelsCount++;
+        break;
+      case "i":
+        vowelsCount++;
+        break;
+      case "o":
+        vowelsCount++;
+        break;
+      case "u":
+        vowelsCount++;
+        break;
 
+      default:
+        break;
+    }
+  });
+  return vowelsCount;
+}
+// Make a program that takes input and returns "Fizz" if it is a multiple of 7, "Fang" if it is a mulitple of 49 AND 3, "Foo" if it is a multiple of 15, and "Far" if it is not divisible by any of those.
+// Note: Your program should only give one output. Note: When you are making your code you should check the divisibility such that it checks 49 and 3 first then 7 then 15. Check the example test codes for examples of the outputs and inputs.
+// ! not done
