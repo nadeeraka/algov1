@@ -8,22 +8,39 @@
 // A class/static method greetExtraTerrestrials/GreetExtraTerrestrials that accepts one parameter raceName and returns "Welcome to Planet Earth raceName". For example, if the race name is "Martians", it should say "Welcome to Planet Earth Martians"
 // You may use any valid syntax you like; however, it is highly recommended that you complete this Kata using ES6 syntax and features.
 
-
 class Person {
-    constructor(firstName = 'Jhon',lastName ='Doe',age=0,gender='Male'){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age =age;
-        this.gender = gender;
+  constructor(firstName = "Jhon", lastName = "Doe", age = 0, gender = "Male") {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.gender = gender;
+  }
 
-    }
-
-    sayFullName()
-    {
-        return this.firstName+ ' '+ this.lastName
-    }
-    static greetExtraTerrestrials(raceName){
-        return `Welcome to Planet Earth ${raceName}`
-    }
-    
+  sayFullName() {
+    return this.firstName + " " + this.lastName;
+  }
+  static greetExtraTerrestrials(raceName) {
+    return `Welcome to Planet Earth ${raceName}`;
+  }
 }
+
+// A palindrome is word which reads the same backwards as it does forwards.
+// For example, pip is a palindrome, as pip backwards is still pip. kip, however, is not, for kip backwards is pik, not kip.
+// Write a function, palindrome, which returns true if the passed string is a palindrome, regardless of capitalisation, and false otherwise.
+function palindrome (str) {
+    return str.toLowerCase().split('').reverse().join('') == str.toLowerCase() 
+
+}
+
+
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+
+// For example:
+
+//  persistence(39) === 3 // because 3*9 = 27, 2*7 = 14, 1*4=4
+//                        // and 4 has only one digit
+
+//  persistence(999) === 4 // because 9*9*9 = 729, 7*2*9 = 126,
+//                         // 1*2*6 = 12, and finally 1*2 = 2
+
+//  persistence(4) === 0 // because 4 is already a one-digit number
