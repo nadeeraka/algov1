@@ -8,22 +8,21 @@
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
 function XO(params) {
-    let x = 0;
-    let o = 0;
-    let arr = params.toLowerCase().split("");
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] == "x") {
-        x++;
-      } else if (arr[i] == "o") {
-        o++;
-      }
+  let x = 0;
+  let o = 0;
+  let arr = params.toLowerCase().split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == "x") {
+      x++;
+    } else if (arr[i] == "o") {
+      o++;
     }
-    if (x == o) {
-      return true;
-    }
-    return false;
-    
   }
+  if (x == o) {
+    return true;
+  }
+  return false;
+}
 // TODO
 
 //   Freddy has a really fat left pinky finger, and every time Freddy tries to type an A, he accidentally hits the CapsLock key!
@@ -41,7 +40,6 @@ function XO(params) {
 // "aAaaaaAaaaAAaAa"
 // -> ""
 
-
 // Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
 
 // If you want to know more http://en.wikipedia.org/wiki/DNA
@@ -52,22 +50,36 @@ function XO(params) {
 
 // DNAStrand ("ATTGC") // return "TAACG"
 
-// DNAStrand ("GTAT") // return "CATA" 
-
+// DNAStrand ("GTAT") // return "CATA"
 
 function DNAStrand(params) {
-    let nArr = []
-    let arr = params.split('');
-   for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === 'A' ||arr[i] === 'T'  ) {
-            arr[i]==='A'?nArr.push('T'):nArr.push('A')
-        }     
-        else if (arr[i] === 'C' ||arr[i] === 'G'  ) {
-            arr[i]==='C'?nArr.push('G'):nArr.push('C')
-        }     
-            
-        
-   }
-   return nArr.join('')
-   
+  let nArr = [];
+  let arr = params.split("");
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === "A" || arr[i] === "T") {
+      arr[i] === "A" ? nArr.push("T") : nArr.push("A");
+    } else if (arr[i] === "C" || arr[i] === "G") {
+      arr[i] === "C" ? nArr.push("G") : nArr.push("C");
+    }
+  }
+  return nArr.join("");
+}
+
+// Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+// Examples:
+
+// number([]) // => []
+// number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
+
+function number(arr) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(`${i + 1}: ${arr[i]}`);
+  }
+  return newArray;
 }
