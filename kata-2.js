@@ -140,3 +140,45 @@ function jadeSmith(params) {
     .map(word => word.slice(0, 1).toUpperCase() + word.slice(1))
     .join(" ");
 }
+
+//longer vartion
+
+function jadeSmith(params) {
+  let arr = params.split('')
+  let newArr = []
+  let a = true;
+  let temp 
+  arr
+      for (let i = 0; i < arr.length; i++) {
+  
+          if(i=== 0 )
+          {
+           temp = arr[i]
+          temp =  temp.toUpperCase()
+           newArr.push(temp)
+           
+          }
+        else if (arr[i]== ' ') {
+              temp = arr[i+1]
+              if(!!temp)
+              {
+                  temp =  temp.toUpperCase()
+              }
+            
+              newArr.push(arr[i])
+              newArr.push(temp)
+              a = false
+            
+          }else if (a == false) {
+             a= true
+              
+          }else{
+              newArr.push(arr[i])
+          }
+             
+          
+  
+      }
+      return newArr.join('')
+  }
+  

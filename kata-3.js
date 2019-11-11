@@ -7,3 +7,21 @@
 // XO("ooxXm") => true
 // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 // XO("zzoo") => false
+function XO(params) {
+    let x = 0;
+    let o = 0;
+    let arr = params.toLowerCase().split("");
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] == "x") {
+        x++;
+      } else if (arr[i] == "o") {
+        o++;
+      }
+    }
+    if (x == o) {
+      return true;
+    }
+    return false;
+    
+  }
+  
