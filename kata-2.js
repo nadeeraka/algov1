@@ -84,6 +84,21 @@ function persistence(params) {
 
   return r - 1;
 }
+
+//decode-the-morse-code
+function solution(params) {
+  return morseCode
+    .split("   ")
+    .map(word =>
+      word
+        .split(" ")
+        .map(code => MORSE_CODE[code] || "")
+        .join("")
+    )
+    .join(" ")
+    .trim();
+}
+
 // Create a function taking a positive integer as its parameter and returning a string containing the Roman Numeral representation of that integer.
 
 // Modern Roman numerals are written by expressing each digit separately starting with the left most digit and skipping any digit with a value of zero. In Roman numerals 1990 is rendered: 1000=M, 900=CM, 90=XC; resulting in MCMXC. 2008 is written as 2000=MM, 8=VIII; or MMVIII. 1666 uses each Roman symbol in descending order: MDCLXVI.
@@ -106,3 +121,22 @@ function persistence(params) {
 // More about roman numerals - http://en.wikipedia.org/wiki/Roman_numerals
 
 // ALGORITHMS ENCODING
+
+// !
+
+// Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word.
+
+// Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+
+// Example:
+
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+// Link to Jaden's former Twitter account @officialjaden via archive.org
+
+function jadeSmith(params) {
+  return params
+    .split(" ")
+    .map(word => word.slice(0, 1).toUpperCase() + word.slice(1))
+    .join(" ");
+}
