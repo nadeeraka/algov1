@@ -7,4 +7,28 @@
 function filter_list(params) {
     return params.filter((e)=>typeof e == "number")
  }
+//  Complete the function/method so that it returns the url with anything after the anchor (#) removed.
+
+// Examples:
+
+// // returns 'www.codewars.com'
+// removeUrlAnchor('www.codewars.com#about')
+
+// // returns 'www.codewars.com?page=1' 
+// removeUrlAnchor('www.codewars.com?page=1')
+
+function removeUrl(url) {
+    let array = url.split('')
+    let newArray = []
+     for (let i = 0; i < array.length; i++) {
+      if(array[i] === '#')
+         {
+             i = array.length;
+         }else{
+  newArray.push(array[i])
+         }
+     }
+     return newArray.join('')
+ 
+ }
  
