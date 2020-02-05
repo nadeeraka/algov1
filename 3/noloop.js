@@ -6,11 +6,36 @@
 
 // Looking for more, loop-restrained fun? Check out the other kata in the series:
 
+const arr = [1, 2, 3, 4];
 
-const myArr =[1,2,3]
-const noLoop = (arr,val)=>
-{
+const noloop = (a, x) => {
+  let num = 0;
+  const poop = () => {
+    if (a[num] === x) {
+      return true;
+    }
 
+    if (num < arr.length) {
+      num++;
+      return poop() ? true : "";
+    } else {
+      return false;
+    }
+  };
+  if (poop()) {
+    return true;
+  }
+  if (poop() === false) {
+    return false;
+  }
+};
+
+console.log(noloop(arr));
+
+// short answer
+function check(a, b) {
+  return a.includes(b);
 }
-
-console.log(noLoop(myArr),3)
+//
+check=(a,x)=>a.some(v=>v==x)
+//
