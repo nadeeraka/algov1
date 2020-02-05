@@ -6,3 +6,11 @@
 
 // Looking for more, loop-restrained fun? Check out the other kata in the series:
 
+
+const myArr =[1,2,3]
+const noLoop = (arr,val)=>
+{
+
+}
+
+console.log(noLoop(myArr),3)
