@@ -25,34 +25,34 @@ const findExceptItems = () => {
 //! big 0(n^2)
 
 // sort uniq items
-const arr:number[] =[1,3,6,8,5,4,0]
+// const arr:number[] =[1,3,6,8,5,4,0]
 
-const unique =(arr:number[])=>
-{
-    let newArr = []
-    let val = {c:arr[0],index:0}
-for (let i = 0; i < arr.length; i++) {
-    val.c = arr[0]
-    for (let x = 0; x < arr.length; x++) {
-        const element = arr[x];
-        if (i === 0 && element < val.c) {
-            val.c = element
-            val.index = x
+// const unique =(arr:number[])=>
+// {
+//     let newArr = []
+//     let val = {c:arr[0],index:0}
+// for (let i = 0; i < arr.length; i++) {
+//     val.c = arr[0]
+//     for (let x = 0; x < arr.length; x++) {
+//         const element = arr[x];
+//         if (i === 0 && element < val.c) {
+//             val.c = element
+//             val.index = x
             
-        }
-        else if (element < val.c && newArr[newArr.length-1]< element) {
-            val.c = element
-        }
+//         }
+//         else if (element < val.c && newArr[newArr.length-1]< element) {
+//             val.c = element
+//         }
       
-    }
-    newArr.push(val.c)
-    arr.splice(val.index)
-    console.log(arr.length)
+//     }
+//     newArr.push(val.c)
+//     arr.splice(val.index)
+//     console.log(arr.length)
     
-}
-return newArr
+// }
+// return newArr
 
-}
+// }
 
-console.log(unique(arr))
-//sort using buble sort
+// console.log(unique(arr))
+// //sort using buble sort
