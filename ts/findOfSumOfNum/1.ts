@@ -22,6 +22,7 @@ const findLagestValInSubArray= (arr:number[], n:number)=>
          // itaration
           
       }
+      return -1
   }
 }
 console.log(findLagestValInSubArray(arr,ans))

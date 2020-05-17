@@ -33,6 +33,9 @@ const findLagestValInSubArray= (arr:number[], n:number)=>
           
       }
   }
+ if (a.length === 0) {
+   return -1
+ }
  return a.sort((a,b)=>a.val-b.val)[a.length-1]
   
 }
