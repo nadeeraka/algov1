@@ -10,7 +10,6 @@ const findFirstDuplicate = (arr: number[], n?: number): number => {
     const element = arr[i];
    
     if (obj[element]) {
-       obj
       return element;
     }
     obj[element] = element
