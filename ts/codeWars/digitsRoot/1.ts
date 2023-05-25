@@ -54,15 +54,15 @@
 // => 2
 
 
-function digital_root(n:number) {
-    //const reducer = (accumulator, currentValue) => accumulator + parseInt(currentValue);
-    let str = n + ''
-    let val = false
-   const recercive = (arr)=>arr.split('').map((a)=>  parseInt(a)).reduce((a,b)=>a+b)
+// function digital_root(n:number) {
+//     //const reducer = (accumulator, currentValue) => accumulator + parseInt(currentValue);
+//     let str = n + ''
+//     let val = false
+//    const recercive = (arr)=>arr.split('').map((a)=>  parseInt(a)).reduce((a,b)=>a+b)
     
-  console.log(recercive())
+//   console.log(recercive())
    
 
-}
+// }
 
-console.log(digital_root(232134))
+// console.log(digital_root(232134))
